@@ -1,0 +1,248 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DS 223 Marketing Analytics</title>
+		<meta name="author" content="Karen Hovhannisyan">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/simple.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai-sublime.css">
+		
+		<style>
+			p{
+				text-align: justify;
+			}
+		
+			h2{
+				/* text-align: left; */
+				font-weight: bold;
+			}
+			#left {
+				margin: 10px 0 15px 20px;
+				text-align: center;
+				float: left;
+				z-index:-10;
+				width:48%;
+				font-size: 0.85em;
+				line-height: 1.5; 
+			}
+
+			#right {
+				margin: 10px 0 15px 0;
+				float: right;
+				text-align: center;
+				z-index:-10;
+				width:48%;
+				font-size: 0.85em;
+				line-height: 1.5; 
+			}
+		</style>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+	<div class="reveal">
+
+      <!-- Any section ment inside of this container is displayed as a slide -->
+     <div class="slides">
+
+
+<!-- Slide 1 -->
+<section>
+<h2>Marketing Analytics</h2>
+<br><br>
+<h4>Karen Hovhannisyan, AUA</h4>
+
+<h4>Dashboard Design Using Dash Part III</h4>
+<h6>Deployment</h6>
+</section>
+
+<!-- Slide 2 -->
+<section> 
+	<h2>Objective</h2>
+	<ul>
+        <li class="fragment highlight-green" data-fragment-index="1">Ideation</li>
+        <li class="fragment highlight-green" data-fragment-index="1">Prototype Design</li>
+        <li class="fragment highlight-green" data-fragment-index="1">Skeleton Construction</li>
+        <li class="fragment highlight-green" data-fragment-index="1">Designing the layouts: static design</li>
+        <li class="fragment highlight-green" data-fragment-index="1">Adding dynamic component</li>
+        <li class="fragment highlight-red" data-fragment-index="1">Deploying</li>        
+    </ul>
+</section> 
+
+
+
+<section>
+    <!-- Slide 3 -->
+    <section><h2>Recall our dashboard</h2></section>
+    <!-- Slide 4 -->
+    <section>
+        <h2>The expected  Output</h2>
+        <img class="plain" src="img/Dashboard.PNG" alt="Dashboard Image">
+    </section>
+    <!-- Slide 5 -->
+    <section>
+        <h2>Environment Setup</h2>
+        <pre class="python"><code>		
+    - layout.py
+    - assets/
+        |-- codepen.css
+        |-- style.css
+    - data/
+        |-- data.csv
+        |-- query.py
+    - components/
+        |-- figures.py
+        |-- models.py
+        |-- other components
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <!-- Slide 6 -->
+    <section><h2>Deployment</h2></section>
+    
+    <!-- Slide 7 -->
+    <section>
+        <h2>Deployment</h2>
+        <small>
+            <ul>
+                <li>apps should be located on a server (cloud)</li>
+                <li>server must have all the dependencies installed <span class="fragment", style="color: green;">containers have alleviated this step</span></li>
+                <li> for handling the dependencies:
+                    <ol>
+                        <li>create a repo in you github: <i>dash_ma</i></li>
+                        <li>create a Virtual Environment: <i>conda create -name dash</i></li>
+                        <li>activate Virtual Environment: <i>conda activate dash</i></li>
+                        <li>install there all the dependencies: <i>pip freeze</i></li>
+                        <li>push it to the server</li>
+                        <li>push your Github repo to the server</li>
+                    </ol>
+                </li>
+            </ul>
+        </small>
+    </section>
+    <!-- Slide 8 -->
+    <section>
+        <h2>Free hosting sources</h2>
+        <ul>
+            <li>Pythonanywhere: only Python</li>
+            <li>Shinyapps: only R</li>
+            <li class="fragment highlight-green">Heroku: general</li>
+        </ul>
+    </section>
+
+</section>
+
+<!-- Heroku Deployment -->
+<section>
+<!-- Slide 8 -->
+    <section>
+        <h2>Deploying in Heroku</h2>
+        <footer><a href="https://www.youtube.com/watch?v=b-M2KQ6_bM4">Video Tutorial</a></footer>
+        <footer><a href="https://www.youtube.com/watch?v=b-M2KQ6_bM4">Step by step guide Tutorial</a></footer>
+    </section>
+<!-- Slide 9 -->
+    <section>
+        <h2>Steps...</h2>
+        <ol>
+            <li>Sign up for account on Heroku</li>
+            <li>Create Your App Name (this will be part of the url)</li>
+            <li><a href="https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli">Download and install Heroku CLI</a></li>
+            <li>The rest you can find in the above tutorials</li>
+        </ol>
+    </section>
+    <!-- Slide 10 -->
+    <section>
+        <h2><a href="">Check out my app</a></h2>
+    </section>
+</section>
+
+
+
+
+
+<!-- Final Slide -->
+<section>
+	<h2>Thank You</h2>
+</section>
+<!-- END OF THE PRESENTATION -->
+	      </div>
+    </div>
+
+	<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+
+    <script>
+     // Full list of configuration options available at:
+     // https://github.com/hakimel/reveal.js#configuration
+     Reveal.initialize({
+       slideNumber:true,
+       controls: true,
+       progress: true,
+       history: true,
+       center: true,
+       transitionSpeed:'slow',
+       previewLinks:true,
+       transition: 'convex', // none/fade/slide/convex/concave/zoom
+       // Optional reveal.js plugins
+       dependencies: [
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js',
+	   condition: function() { return !document.body.classList; } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js',
+	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js',
+	   condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
+	   async: true,
+	   condition: function() { return !!document.querySelector( 'pre code' ); },
+	   callback: function() { hljs.initHighlightingOnLoad(); } },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true },
+	 { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true }
+       ]
+     });
+    </script>
+
+	div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<h2>Demonstrating the Box Model</h2>
+
+<p>borders; padding; margins; and the actual content.</p>
+
+<div>Some text in Div</div>
+
+</body>
+
+	</body>
+</html>
+
+
