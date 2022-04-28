@@ -8,6 +8,7 @@ import pandas as pd
 
 		
 app=Dash(__name__)
+server=app.server
 app.title = 'Stock Ticker Dashboard'
 	
 app.layout = html.Div([

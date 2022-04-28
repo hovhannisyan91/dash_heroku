@@ -133,7 +133,7 @@
                         <li>create a repo in you github: <i>dash_ma</i></li>
                         <li>create a Virtual Environment: <i>conda create -name dash</i></li>
                         <li>activate Virtual Environment: <i>conda activate dash</i></li>
-                        <li>install there all the dependencies: <i>pip freeze</i></li>
+                        <li>install there all the dependencies plus <i class='fragment highlight-green'>pip install gunicorn </i>: <i>pip freeze > requirements.txt</i></li>
                         <li>push it to the server</li>
                         <li>push your Github repo to the server</li>
                     </ol>
@@ -159,7 +159,7 @@
     <section>
         <h2>Deploying in Heroku</h2>
         <footer><a href="https://www.youtube.com/watch?v=b-M2KQ6_bM4">Video Tutorial</a></footer>
-        <footer><a href="https://www.youtube.com/watch?v=b-M2KQ6_bM4">Step by step guide Tutorial</a></footer>
+        <footer><a href="https://drive.google.com/file/d/1kowjMGKN6rbxh9n-5q1cP3BkcZ2yOAvo/view">Step by step guide Tutorial</a></footer>
     </section>
 <!-- Slide 9 -->
     <section>
@@ -168,10 +168,17 @@
             <li>Sign up for account on Heroku</li>
             <li>Create Your App Name (this will be part of the url)</li>
             <li><a href="https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli">Download and install Heroku CLI</a></li>
+            <li>right below <i>app=Dash(__name__)</i> add this line: <i>server=app.server</i></li>
             <li>The rest you can find in the above tutorials</li>
         </ol>
     </section>
+
+
     <!-- Slide 10 -->
+    <section>
+        <h2>Providing server</h2>
+    </section>
+    <!-- Slide 11 -->
     <section>
         <h2><a href="">Check out my app</a></h2>
     </section>
