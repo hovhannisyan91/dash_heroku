@@ -106,13 +106,6 @@
     - assets/
         |-- codepen.css
         |-- style.css
-    - data/
-        |-- data.csv
-        |-- query.py
-    - components/
-        |-- figures.py
-        |-- models.py
-        |-- other components
         </code></pre>
     </section>
 </section>
@@ -120,28 +113,7 @@
 <section>
     <!-- Slide 6 -->
     <section><h2>Deployment</h2></section>
-    
     <!-- Slide 7 -->
-    <section>
-        <h2>Deployment</h2>
-        <small>
-            <ul>
-                <li>apps should be located on a server (cloud)</li>
-                <li>server must have all the dependencies installed <span class="fragment", style="color: green;">containers have alleviated this step</span></li>
-                <li> for handling the dependencies:
-                    <ol>
-                        <li>create a repo in you github: <i>dash_ma</i></li>
-                        <li>create a Virtual Environment: <i>conda create -name dash</i></li>
-                        <li>activate Virtual Environment: <i>conda activate dash</i></li>
-                        <li>install there all the dependencies plus <i class='fragment highlight-green'>pip install gunicorn </i>: <i>pip freeze > requirements.txt</i></li>
-                        <li>push it to the server</li>
-                        <li>push your Github repo to the server</li>
-                    </ol>
-                </li>
-            </ul>
-        </small>
-    </section>
-    <!-- Slide 8 -->
     <section>
         <h2>Free hosting sources</h2>
         <ul>
@@ -150,42 +122,62 @@
             <li class="fragment highlight-green">Heroku: general</li>
         </ul>
     </section>
-
-</section>
-
-<!-- Heroku Deployment -->
-<section>
-<!-- Slide 8 -->
+    <!-- Slide 8 -->
     <section>
-        <h2>Deploying in Heroku</h2>
-        <footer><a href="https://www.youtube.com/watch?v=b-M2KQ6_bM4">Video Tutorial</a></footer>
-        <footer><a href="https://drive.google.com/file/d/1kowjMGKN6rbxh9n-5q1cP3BkcZ2yOAvo/view">Step by step guide Tutorial</a></footer>
+        <h2>Deployment Part I</h2>
+        <small>
+            <ul>
+                <li>apps should be located on a server (cloud)</li>
+                <li>server must have all the dependencies installed
+                <li> for handling the dependencies:
+                    <ol>
+                        <li>create a directory: <i>dash_deployment</i> and put above mentioned files there</li>
+                        <li>navigate to the above directory and in the terminal type <i>git init</i></li>
+                        <li>Create a Virtual Environment</li>
+                            <ol>
+                                <li>installing virtualenv package: <i style="color: red;">pip install virtualenv</i></li>
+                                <li>create a Virtual Environment:  <i style="color: red;">python -m virtualenv venv</i> </li>
+                                <li>activate Virtual Environment:  <i style="color: red;">.\venv\Scripts\activate</i> </li>
+                            </ol>
+                            
+                        <li>install there all the dependencies:</li>
+                            <ul>
+                                <li>our dashboard needs: <i style="color: red;"> pip install pandas dash pandas-datareader datetime</i> </li>
+                                <li>heroku needs: <i style="color: red;"> pip install gunicorn </i> </li>
+                                <li>create the requirements.txt  file: <i style="color: red;"> pip freeze > requirements.txt</i> </li>
+                            </ul>
+                    </ol>
+                </li>
+            </ul>
+        </small>
     </section>
-<!-- Slide 9 -->
+    <!-- Slide 9 -->
+
     <section>
-        <h2>Steps...</h2>
+        <h2>Deployment Part II</h2>
+
         <ol>
-            <li>Sign up for account on Heroku</li>
-            <li>Create Your App Name (this will be part of the url)</li>
-            <li><a href="https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli">Download and install Heroku CLI</a></li>
-            <li>right below <i>app=Dash(__name__)</i> add this line: <i>server=app.server</i></li>
-            <li>The rest you can find in the above tutorials</li>
+            <li>In <i>layout.py</i> file right below  <i>app=Dash(__name__)</i> add this line: <i>server=app.server</i></li>
+            <li>Sign in to heroku and create an app</li>
+            <li>create <i style="color: red;">.gitignore</i> file and put: venv
+                *.pyc
+                .env
+                .DS_Store </li>
+            <li>create <i style="color: red;"> Procfile</i> web: gunicorn layout:server</li>
+            <li>heroku git:remote -a <span style="color: orange;">yourappname</span></li>
+            <li>git add .</li>
+            <li>git commit -am &quot;launch&quot;</li>
+            <li>git push heroku master</li>
         </ol>
+
     </section>
 
-
-    <!-- Slide 10 -->
-    <section>
-        <h2>Providing server</h2>
-    </section>
-    <!-- Slide 11 -->
-    <section>
-        <h2><a href="">Check out my app</a></h2>
-    </section>
 </section>
 
-
-
+<!-- Slide 11 -->
+<section>
+    <h2><a href="https://marketinganaltyics.herokuapp.com/">Check out my app</a></h2>
+</section>
 
 
 <!-- Final Slide -->
