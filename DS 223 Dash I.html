@@ -43,6 +43,30 @@
 				font-size: 0.85em;
 				line-height: 1.5; 
 			}
+
+			#box-container {
+				display: flex;
+				text-align: center;
+				}
+
+				#box-1 {
+				/* background-color: dodgerblue; */
+				width: 20%;
+				text-align: center;
+				}
+
+				#box-2 {
+				/* background-color: orangered; */
+				width: 38%;
+				text-align: center;
+				}
+
+				#box-3 {
+				/* background-color: green; */
+				width: 38%;
+				text-align: center;
+				}
+
 		</style>
 		<!-- Printing and PDF exports -->
 		<script>
@@ -71,7 +95,7 @@
 <br><br>
 <h4>Karen Hovhannisyan, AUA</h4>
 
-<h4>Dashboard Design Using Dash Part |</h3>
+<h4>Dashboard Development Using</h3>
 </section>
 
 <!-- Slide 2 -->
@@ -97,13 +121,443 @@
 	<p>By the end of the session, you should be able to:</p>
 
 	<ul>
+		<li>understand core concepts in HTML and CSS</li>
 		<li>feel comfortable with HTML and CSS</li>
-		<li>finalize the layout of group project</li>
+		<li>finalize the layout of the group project</li>
 		<li>try some element of reactive programming</li>
-		<li>design you own callbacks</li>
+		<li>design your own callbacks</li>
 	</ul>
 </section>
 
+<!-- Slide 4 -->
+<section>
+	<h2>The goal</h2>
+	<p>By the end of the session you should be able to finalize your group projects. </p>
+</section>
+
+<!-- WEB-->
+<section>
+	<!-- Slide 5-->
+	<section><h2>Front-end</h2> </section>
+	<!-- Slide 6-->
+	<section>
+		<h2>Front-end</h2>
+		<p>Frontend (the “face”) is what user interacts with. Hence, it is critically important to have user-friendly frontend design, as even if you have the best functionalities, user will not use your dashboard if it is not intuitive. 
+		</p>
+	</section>
+
+	<!-- Slide 7-->
+	<section>
+		<ul>
+			<li>The design should also address <b>the user experience</b> by decreasing the chance of wrong decisions.</li>
+			<li>As frontend component is what users interact with, it is also known as <b>user interface</b>.</li>
+			<li>Browsers understand <b></b> programming language HTML			</li>
+			<li>CSS will be used to give style to HTML.</li>
+		</ul>
+
+	</section>
+</section>
+
+<!-- HTML-->
+<section>
+	<!-- Slide 8-->
+	<section>
+		<h2>HTML</h2>
+		<p> HyperText Markup Language</p>
+	 </section>
+	 <!-- Slide 9-->
+	 <section>
+		<h2>Layout</h2>
+	
+			<div id="left">
+				<img class="plain" src="img/slides/layout_html.png" alt="">
+			</div>		
+			<div id="right">
+				
+				<pre>
+					<code data-trim>
+&lt;html&gt;
+
+	&lt;head&gt;
+		Here is the tab name
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		The content
+	&lt;/body&gt;
+
+&lt;/html&gt;
+					</code>
+				</pre>
+			</div>
+				
+	</section>
+	 <!-- Slide 10-->
+	 <section>
+		<h2>Headers</h2>
+	
+			<div id="left">
+				<img class="plain" src="img/slides/headers_html.png" alt="">
+			</div>		
+			<div id="right">
+				
+				<pre><code>
+
+&lt;body&gt;
+	&lt;h1&gt;Heading 1&lt;/h1&gt;
+	&lt;h2&gt;Heading 2&lt;/h2&gt;
+		&lt;h3&gt;Heading 3&lt;/h3&gt;
+	&lt;h4&gt;Heading 4&lt;/h4&gt;
+	&lt;h5&gt;Heading 5&lt;/h5&gt;
+	&lt;h6&gt;Heading 6&lt;/h6&gt;
+	This is the first paragraph.
+	&lt;p&gt; And this is the second 
+	paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+
+						
+				</code></pre>
+			</div>
+				
+	</section>
+	 <!-- Slide 10-->
+	 <section>
+		<h2>Lists</h2>
+	
+			<div id="left">
+				<img class="plain" src="img/slides/lists_html.png" alt="">
+			</div>		
+			<div id="right">
+				
+				<pre><code>
+&lt;body&gt;
+Some ordered list:   
+&lt;ol&gt;
+	&lt;li&gt;Element 1&lt;/li&gt;
+	&lt;li&gt;Element 2&lt;/li&gt;
+	&lt;li&gt;Element 3&lt;/li&gt;
+&lt;/ol&gt;
+		&lt;br&gt;&lt;br&gt;
+Some unordered list:
+&lt;ul&gt;
+	&lt;li&gt;Element 1&lt;/li&gt;
+	&lt;li&gt;Element 2&lt;/li&gt;
+	&lt;li&gt;Element 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;		
+				</code></pre>
+			</div>
+				
+	</section>
+	 <!-- Slide 11-->
+	 <section>
+		<h2>Text Formatting</h2>
+	
+			<div id="left">
+				<img class="plain" src="img/slides/text_formats_html.png" alt="">
+			</div>		
+			<div id="right">
+				
+			<pre><code>
+&lt;body&gt;
+	&lt;b&gt;Bold&lt;/b&gt;
+	&lt;br&gt;
+	&lt;i&gt;Italic&lt;/i&gt;
+	&lt;br&gt;
+	&lt;strong&gt;Strong&lt;/strong&gt;
+	&lt;em&gt;Emphasized&lt;/em&gt;
+	&lt;br&gt;
+	&lt;a href=&ldquo;something.com&rdquo;&gt;Click here&lt;/a&gt;
+&lt;/body&gt;
+			 </code></pre>
+			</div>
+				
+	</section>
+
+	 <!-- Slide 12-->
+	 <section>
+		<h2>Tables</h2>
+	
+			<div id="left">
+				<img class="plain" src="img/slides/table_html.png" alt="">
+			</div>		
+			<div id="right">
+				
+				<pre><code>
+&lt;body&gt;
+	&lt;table&gt;
+		&lt;tr&gt;
+		&lt;th&gt;Header 1&lt;/th&gt;
+		&lt;th&gt;Header 2&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		&lt;td&gt;Row1, Data1&lt;/td&gt;
+		&lt;td&gt;Row1, Data2&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		&lt;td&gt;Row2, Data1&lt;/td&gt;
+		&lt;td&gt;Row2, Data2&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+
+&lt;/body&gt;						
+				</code></pre>
+			</div>
+				
+	</section>
+	 <!-- Slide 13-->
+	 <section>
+		<h2>Images</h2>
+	
+			<div id="left">
+				<img class="plain" src="img/slides/image_html.png" alt="">
+			</div>		
+			<div id="right">
+				
+				<pre><code>
+&lt;body&gt;
+
+&lt;img src=&quot;marketing.jpg&quot;
+		height=&quot;20%&quot;
+		width=&quot;20%&quot;
+		alt= &quot;Marketing 	picture&quot;&gt;
+
+&lt;/body&gt;										
+				</code></pre>
+			</div>
+				
+	</section>
+	 <!-- Slide 14-->
+	 <section>
+		<h2>Head</h2>
+	
+			<div id="left">
+				<img class="plain" src="img/slides/head_html.png" alt="">
+			</div>		
+			<div id="right">
+				
+				<pre><code>
+&lt;head&gt;
+
+	&lt;link rel=&ldquo;stylesheet&rdquo; 
+			href=&ldquo;style.css&rdquo;&gt;
+
+	&lt;title&gt;
+		Introduction to HTML   
+	&lt;/title&gt;
+
+
+&lt;/head&gt;									
+				</code></pre>
+			</div>
+				
+	</section>
+</section>
+<!-- CSS -->
+<section>
+	<!-- Slide 15 -->
+	<section>
+		<h2>CSS</h2>
+		<p>Cascaded Style Sheet</p>
+	</section>
+
+	 <!-- Slide 16 -->
+	<section>
+		<h2>Stylesheet Structure</h2>
+		<div id="left">
+			<img class="plain" src="img/slides/css_1.png" alt="">
+		</div>		
+		<div id="right">
+			
+			<pre><code>
+
+
+body {
+	background: #adb9ca;
+	}
+#title{
+	text-align: center;
+	}
+.u_list{
+	color: #f44a41;
+	font-size: 60px;
+	}
+							
+			</code></pre>
+		</div>
+
+		
+	</section>
+
+ <!-- Slide 17 -->
+	
+	<section>
+		<h2>class(.) ; id(#), style</h2>
+		<div id="box-container">
+			<div id="box-1">
+				 <p>Screen</p>
+				 <img class="plain" src="img/slides/css_2.png" alt="">
+			</div>
+			<div id="box-2">
+				<p>HTML</p>
+				<pre><code> 
+&lt;h1 id=&quot;title&quot;
+style=&quot;color:green;&quot;&gt;Header1&lt;/h1&gt;
+	
+	&lt;br&gt;
+
+&lt;ul class=&quot;u_list&quot;&gt;
+	&lt;li&gt;Element 1&lt;/li&gt;
+	&lt;li&gt;Element 2&lt;/li&gt;
+	&lt;li&gt;Element 3&lt;/li&gt;
+&lt;/ul&gt;
+				 </code></pre>
+			</div>
+			<div id="box-3">
+				<p>CSS</p>
+				<pre><code> 
+body {
+	background: #adb9ca;
+}
+#title{
+	text-align: center;
+}
+.u_list{
+	color: #f44a41;
+	font-size: 60px;
+}
+					
+				 </code></pre>
+			</div>
+		</div>
+	</section>
+
+	<!-- Slide 18 -->
+	
+	<section>
+		<h2> div and span</h2>
+		<div id="box-container">
+			<div id="box-1">
+				 <p>Screen</p>
+				 <img class="plain" src="img/slides/css_3.png" alt="">
+			</div>
+			<div id="box-2">
+				<p>HTML</p>
+				<pre><code> 
+&lt;body&gt;
+	&lt;div id=&quot;left&quot;&gt;
+		&lt;h1&gt;Part 1&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;div id=&quot;right&quot;&gt;
+		&lt;h1&gt;Part 2&lt;/h1&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+				 </code></pre>
+			</div>
+			<div id="box-3">
+				<p>CSS</p>
+				<pre><code> 
+body {
+	background: #adb9ca
+;
+	}
+
+#left {
+float: left;
+width: 25%;
+height: 100px;
+background-color: #ffa500;
+}
+
+#right {
+float: right;
+width: 75%;
+height: 100px;
+background-color: #008000;
+}
+										
+				 </code></pre>
+			</div>
+		</div>
+	</section>
+
+ <!-- Slide  19-->
+	<section>
+		<h2>CSS Boxes</h2>
+		<div id="left">
+			<small>
+				<ul>
+					<li><b>Content: </b>the content of the box, where text and images appear</li>
+					<li><b>Padding: </b>clears an area around the content. The padding is transparent</li>
+					<li><b>Border: </b>a border that goes around the padding and content</li>
+					<li><b>Margin: </b>clears an area outside the boarder</li>
+				</ul>
+			</small>
+		</div>
+
+		<div id="right">
+			<img class="plain" src="img/slides/css_5.png" alt="">
+		</div>
+	</section>
+
+	<section>
+		<h2> div and span</h2>
+		<div id="box-container">
+			<div id="box-1">
+				 <p>Screen</p>
+				 <img class="plain" src="img/slides/css_6.png" alt="">
+			</div>
+			<div id="box-2">
+				<p>HTML</p>
+				<pre><code> 
+&lt;body&gt;
+	&lt;h2&gt;Demonstrating the Box Model&lt;/h2&gt;
+
+	&lt;p&gt;borders; padding; 	margins; and the actual 	content.
+	&lt;/p&gt;
+
+	&lt;div id=&quot;cssbox&quot;&gt;Some text 	in Div
+	&lt;/div&gt;
+&lt;/body&gt;
+				 </code></pre>
+			</div>
+			<div id="box-3">
+				<p>CSS</p>
+				<pre><code> 
+#cssbox{
+background-color:#adb9ca;
+width: 300px;
+border: 15px solid green;
+padding: 50px;
+margin: 20px;
+text-align:center;
+}
+					  
+										
+				 </code></pre>
+			</div>
+		</div>
+	</section>
+
+ <!-- Slide  20-->
+	<section>
+		<h2>Consistency Styled Apps</h2>
+		<div id="left">
+			<a href="https://dash-bootstrap-components.opensource.faculty.ai/"> Bootstrap</a>
+		</div>
+		<div id="right">
+			<a href="https://codepen.io/chriddyp/pen/bWLwgP.css"> Codepen Plotly</a>
+		</div>
+		
+	</section>	
+
+	 <!-- Slide  21-->
+	<section>
+		<h2>Grid Design</h2>
+		<img class="plain" src="img/slides/grid.png" alt="">
+	</section>
+</section>
 
 <!-- Dash layout -->
 <section>
@@ -160,6 +614,10 @@ if __name__=='__main__':
 		- assets/
 		    |-- main.css
 		    |-- script.js
+		- pages/
+		    |-- page1	
+		    |-- page2	
+		    |-- page2	
 		- components/
 		    |-- figures.py
 			|-- models.py
@@ -232,12 +690,6 @@ if __name__=='__main__':
 	app.run_server(debug=True)
 		</code></pre>
 	</section>
-	<!-- Slide 9 -->
-	<section>
-		<h2>Grid Style</h2>
-		<img src="http://csharpcorner.mindcrackerinc.netdna-cdn.com/article/an-overview-of-bootstrap-grid-system/Images/image001.gif" alt="">
-	</section>
-	
 </section>
 <!-- Dash Core Components -->
 <section>
@@ -474,7 +926,7 @@ if __name__=='__main__':
 			<li>Create a function to return some desired output or update something</li>
 			<li>Decorate that function with an <i>@app.callback</i> decorator:
 				<ul>
-					<li>set and <b>Output</b> to a component id</li>
+					<li>set an <b>Output</b> to a component id</li>
 					<li>set an <b>Input</b> to a component id</li>
 				</ul>
 			</li>
@@ -544,9 +996,9 @@ if __name__=='__main__':
 <!-- Slide 22 -->
 	<section>
 		<h2>Text Input with State</h2>
-		<p>In the previous example we saw how the input immediately affects the output. As soon as the value was entered, the page updates to reflect any change</p>
+		<p>In the previous example we saw how the input immediately affects the output. As soon as the value was entered, the page updates to reflect any change.</p>
 		<p class="fragment">What if one wants to wait before displaying the page?</p>
-		<p class="fragment">What if one wants more time to enter a series of changes before submitting them</p>
+		<p class="fragment">What if one wants more time to enter a series of changes before submitting them?</p>
 		
 	</section>
 <!-- Slide 22 -->
