@@ -1,6 +1,6 @@
 # Dash Project for MA course
 
-End to end sample for dash
+End to end dashboard for dash
 
 ## Environment
 
