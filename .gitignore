@@ -1,2 +1,8 @@
 venv
 frontend
+components
+*.pyc 
+.env 
+.DS_Store
+*.ipynb
+
